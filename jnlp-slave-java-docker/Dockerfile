@@ -8,7 +8,7 @@ USER root
 # Upgrade aws-cli
 RUN apt -qqy update \
   && apt -qqy upgrade \
-  && pip install --upgrade awscli
+  && pip install --upgrade awscli \
   && apt -qqy autoremove \
   && addgroup --system --gid 497 docker \
   && apt -qqy --no-install-recommends install docker.io jq \
