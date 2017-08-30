@@ -11,7 +11,7 @@ RUN apt -qqy update \
   && pip install --upgrade awscli \
   && apt -qqy autoremove \
   && addgroup --system --gid 497 docker \
-  && apt -qqy --no-install-recommends install docker.io jq \
+  && apt -qqy --no-install-recommends install docker.io jq nuget \
   && usermod -a -G docker jenkins \
   && usermod -a -G staff jenkins \
   && ln -sf /usr/bin/jq /usr/bin/jq-linux64 \
